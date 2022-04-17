@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="heading">Movie Library</h1>
+    <button class="addButton">Add Movie</button>
+
+    <div class="modal">
+        <div class="modal-content">
+            <form action="nowhere/path" method="get" class="form">
+                <label for="title" class="title">Movie Name:</label>
+                <input type="text" name="title" id="title" required>
+
+                <label for="director" class="director">Director:</label>
+                <input type="text" name="director" id="director" required>
+
+                <label for="genre" class="genre">Genre:</label>
+                <input type="text" name="genre" id="genre" required>
+
+                <label for="runtime" class="runtime">Runtime:</label>
+                <input type="text" name="runtime" id="runtime" required>
+
+                <label for="year" class="year">Year:</label>
+                <input type="number" name="year" id="year" pattern="(\d{4})" required>
+
+                <input type="submit" value="Submit" class="submit">
+            </form>
+            <button class="close">Close</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>
