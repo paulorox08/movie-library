@@ -47,7 +47,7 @@ close.addEventListener('click', () => {
 
 
 submit.addEventListener('click', () => {
-    let newMovie = document.createElement('div');
+    let newMovie = document.createElement('p');
     newMovie.innerText = titleInfo.value;
     movieContainer.appendChild(newMovie)
 })
