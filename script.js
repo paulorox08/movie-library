@@ -12,13 +12,7 @@ const yearInfo = document.querySelector('#year');
 
 const submit = document.querySelector('.submit');
 
-let myLibrary = [
-    title = titleInfo.value,
-    director = directorInfo.value,
-    genre = genreInfo.value,
-    runtime = runtimeInfo.value,
-    year = yearInfo.value
-];
+let myLibrary = [];
 
 function Movie(title, director, genre, runtime, date) {
     this.title = title
@@ -29,13 +23,17 @@ function Movie(title, director, genre, runtime, date) {
 }
 
 function addMovieToLibrary() {
+    newMovie = titleInfo.value + ',' + directorInfo.value + ',' + genreInfo.value + ',' + runtimeInfo.value + ',' + yearInfo.value;
+    myLibrary.push(newMovie);
+    console.log(myLibrary);
 
+    const newCard = document.createElement('div');
+    newCard.innerText = newMovie;
+    newCard.style.border = '1px solid black';
+
+    movieContainer.appendChild(newCard);
 }
 
-const m1 = new Movie("Batman Begins", "Christoper Nolan", "Supehero", "140min");
-
-
-addButton.addEventListener('click', addMovieToLibrary)
 
 addButton.addEventListener('click', () => {
     modal.style.display = 'block';
@@ -46,8 +44,4 @@ close.addEventListener('click', () => {
 });
 
 
-submit.addEventListener('click', () => {
-    let newMovie = document.createElement('p');
-    newMovie.innerText = titleInfo.value;
-    movieContainer.appendChild(newMovie)
-})
+submit.addEventListener('click', addMovieToLibrary)
