@@ -26,7 +26,7 @@ Movie.prototype.createMovie = function() {
     console.log("This is the movie" + this.title + this.director + this.genre + this.runtime + this.year);
 
     const newContainer = document.createElement('div');
-    newContainer.style.border = '5px solid black';
+    newContainer.className = 'newContainer'
     movieContainer.appendChild(newContainer);
 
     const newTitle = document.createElement('span');
