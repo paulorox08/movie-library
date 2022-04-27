@@ -1,3 +1,5 @@
+/* MODAL FOR ASKING MOVIE */
+
 .modal {
     display: none;
     position: fixed;
@@ -26,6 +28,7 @@
     text-align: center;
 }
 
+/* FORM */
 form {
     display: flex;
     flex-direction: column;
@@ -41,4 +44,9 @@ input {
 .close {
  width: 210px;
  padding: 0;
+}
+
+/* MOVIE CARD */
+span {
+    border: 3px solid blue;
 }

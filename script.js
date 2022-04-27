@@ -14,25 +14,32 @@ const submit = document.querySelector('.submit');
 
 let myLibrary = [];
 
-function Movie(title, director, genre, runtime, date) {
-    this.title = title
-    this.director = director
-    this.genre = genre
-    this.runtime = runtime
-    this.date = date
+function Movie(title, director, genre, runtime, year) {
+    this.title = title;
+    this.director = director;
+    this.genre = genre;
+    this.runtime = runtime;
+    this.year = year;
+}
+
+Movie.prototype.createMovie = function() {
+    console.log("This is the movie" + this.title + this.director + this.genre + this.runtime + this.year);
+    const newCard = document.createElement('span');
+    newCard.innerText = newMovie.title;
+    newCard.style.border = '1px solid blue';
+
+    movieContainer.appendChild(newCard);
+    modal.style.display = 'none';
 }
 
 function addMovieToLibrary() {
-    newMovie = titleInfo.value + ',' + directorInfo.value + ',' + genreInfo.value + ',' + runtimeInfo.value + ',' + yearInfo.value;
+    newMovie = new Movie(titleInfo.value, directorInfo.value, genreInfo.value, runtimeInfo.value, yearInfo.value);
     myLibrary.push(newMovie);
     console.log(myLibrary);
 
-    const newCard = document.createElement('div');
-    newCard.innerText = newMovie;
-    newCard.style.border = '1px solid black';
-
-    movieContainer.appendChild(newCard);
+    newMovie.createMovie();
 }
+
 
 
 addButton.addEventListener('click', () => {
