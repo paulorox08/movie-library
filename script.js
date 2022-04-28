@@ -23,7 +23,6 @@ function Movie(title, director, genre, runtime, year) {
 }
 
 Movie.prototype.createMovie = function() {
-    console.log("This is the movie" + this.title + this.director + this.genre + this.runtime + this.year);
 
     const newContainer = document.createElement('div');
     newContainer.className = 'newContainer'
@@ -54,9 +53,21 @@ Movie.prototype.createMovie = function() {
     newYear.style.border = '1px solid pink';
     newContainer.appendChild(newYear);
 
-
     modal.style.display = 'none';
+
+    console.log(newTitle.innerText);
+
+    const newRemove = document.createElement('button');
+    newRemove.className = 'remove';
+    newRemove.innerText = 'Remove';
+    newContainer.appendChild(newRemove);
+
+    newRemove.addEventListener('click', () => {
+        newContainer.remove();
+    })
+
 }
+
 
 function addMovieToLibrary() {
     newMovie = new Movie(titleInfo.value, directorInfo.value, genreInfo.value, runtimeInfo.value, yearInfo.value);
