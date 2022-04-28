@@ -1,3 +1,12 @@
+/* BODY */
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100vh;
+}
+
+
 /* MODAL FOR ASKING MOVIE */
 
 .modal {
@@ -28,6 +37,13 @@
     text-align: center;
 }
 
+/* HEADER */
+.header {
+    text-align: center;
+    background-color: blue;
+    font-size: 48px;
+}
+
 /* FORM */
 form {
     display: flex;
@@ -46,6 +62,16 @@ input {
  padding: 0;
 }
 
+/* ADD BUTTON */
+.addButton {
+    width: 150px;
+    height: 200px;
+    padding: 0;
+    border-radius: 5px;
+    border: 3px solid gray;
+    border-style: dashed;
+}
+
 /* MOVIE CARD */
 
 .movie-container {
@@ -53,14 +79,14 @@ input {
     flex-wrap: wrap;
     gap: 30px;
 }
+
 .newContainer {
-    width: 150px;
-    height: 200px;
+    width: 144px;
+    height: 194px;
     border-radius: 5px;
     border: 3px solid black;
     display: flex;
     flex-direction: column;
-    padding: 30px;
     justify-content: center;
     align-items: center;
     gap: 10px;
