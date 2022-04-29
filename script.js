@@ -40,7 +40,7 @@ function validate() {
         alert("Missing runtime");
         return false;
     }
-    
+
     let yearRGEX = /^\d{4}$/;
     let yearResult = yearRGEX.test(yearInfo.value);
     if(yearResult == false) {
@@ -96,7 +96,7 @@ Movie.prototype.createMovie = function() {
     modal.style.display = 'none';
 
     const newRemove = document.createElement('div');
-    newRemove.className = newTitle.innerText;
+    newRemove.className = newTitle.innerText + " " + "material-symbols-outlined";
     newRemove.innerText = 'Remove';
     newContainer.appendChild(newRemove);
 
