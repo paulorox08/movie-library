@@ -30,6 +30,7 @@ Movie.prototype.createMovie = function() {
 
     const newTitle = document.createElement('span');
     newTitle.innerText = newMovie.title;
+    newTitle.className = newTitle.innerText;
     newTitle.style.border = '1px solid blue';
     newContainer.appendChild(newTitle);
 
@@ -55,19 +56,18 @@ Movie.prototype.createMovie = function() {
 
     modal.style.display = 'none';
 
-    console.log(newTitle.innerText);
-
-    const newRemove = document.createElement('button');
-    newRemove.className = 'remove';
+    const newRemove = document.createElement('div');
+    newRemove.className = newTitle.innerText;
     newRemove.innerText = 'Remove';
     newContainer.appendChild(newRemove);
 
     newRemove.addEventListener('click', () => {
         newContainer.remove();
-    })
+        let index = myLibrary.map(function(e) { return e.title;}).indexOf(newRemove.className);
+        myLibrary.splice(index, 1);
+    });
 
 }
-
 
 function addMovieToLibrary() {
     newMovie = new Movie(titleInfo.value, directorInfo.value, genreInfo.value, runtimeInfo.value, yearInfo.value);
@@ -88,4 +88,7 @@ close.addEventListener('click', () => {
 });
 
 
-submit.addEventListener('click', addMovieToLibrary)
+submit.addEventListener('click', () => {
+    addMovieToLibrary();
+    
+});
