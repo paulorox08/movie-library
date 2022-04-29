@@ -31,12 +31,12 @@ body {
     border: 1px solid black;
     width: 250px;
     height: 400px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; */
 }
 
 /* HEADER */
