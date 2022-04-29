@@ -12,6 +12,45 @@ const yearInfo = document.querySelector('#year');
 
 const submit = document.querySelector('.submit');
 
+function validate() {
+    let titleRGEX = /^(?!\s*$).+/;
+    let titleResult = titleRGEX.test(titleInfo.value);
+    if (titleResult == false) {
+        alert("Missing title");
+        return false;
+    }
+
+    let directorRGEX = /^(?!\s*$).+/;
+    let directorResult = directorRGEX.test(directorInfo.value);
+    if (directorResult == false) {
+        alert("Missing director");
+        return false;
+    }
+
+    let genreRGEX = /^(?!\s*$).+/;
+    let genreResult = genreRGEX.test(genreInfo.value);
+    if (genreResult == false) {
+        alert("Missing genre");
+        return false;
+    }
+
+    let runtimeRGEX = /^(?!\s*$).+/;
+    let runtimeResult = runtimeRGEX.test(runtimeInfo.value);
+    if (runtimeResult == false) {
+        alert("Missing runtime");
+        return false;
+    }
+    
+    let yearRGEX = /^\d{4}$/;
+    let yearResult = yearRGEX.test(yearInfo.value);
+    if(yearResult == false) {
+        alert('Missing/incorrect year');
+        return false;
+    }
+
+    return true;
+}
+
 let myLibrary = [];
 
 function Movie(title, director, genre, runtime, year) {
@@ -63,7 +102,7 @@ Movie.prototype.createMovie = function() {
 
     newRemove.addEventListener('click', () => {
         newContainer.remove();
-        let index = myLibrary.map(function(e) { return e.title;}).indexOf(newRemove.className);
+        let index = myLibrary.map(function(e) {return e.title;}).indexOf(newRemove.className);
         myLibrary.splice(index, 1);
     });
 
@@ -89,6 +128,8 @@ close.addEventListener('click', () => {
 
 
 submit.addEventListener('click', () => {
-    addMovieToLibrary();
+    if (validate() == true) {
+        addMovieToLibrary();
+    };
     
 });

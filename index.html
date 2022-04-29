@@ -19,25 +19,27 @@
 
     <div class="modal">
         <div class="modal-content">
-            <button class="close">Close</button>
-            <form class="form">
-                <label for="title" class="title">Movie Name:</label>
-                <input type="text" name="title" id="title" required>
+            <form class="form" action="#">
+                <label for="movieTitle" class="title">Movie Name:</label>
+                <input type="text" name="movieTitle" id="title">
 
-                <label for="director" class="director">Director:</label>
-                <input type="text" name="director" id="director" required>
+                <label for="movieDirector" class="director">Director:</label>
+                <input type="text" name="movieDirector" id="director">
 
-                <label for="genre" class="genre">Genre:</label>
-                <input type="text" name="genre" id="genre" required>
+                <label for="movieGenre" class="genre">Genre:</label>
+                <input type="text" name="movieGenre" id="genre" required >
 
-                <label for="runtime" class="runtime">Runtime:</label>
-                <input type="text" name="runtime" id="runtime" required>
+                <label for="movieRuntime" class="runtime">Runtime:</label>
+                <input type="text" name="movieRuntime" id="runtime">
 
-                <label for="year" class="year">Year:</label>
-                <input type="number" name="year" id="year" pattern="(\d{4})" required>
+                <label for="movieYear" class="year">Year:</label>
+                <input type="number" name="movieYear" id="year">
             </form>
 
-            <input type="submit" value="Submit" class="submit">
+            <div class="bottomButtons">
+                <button class="close">Cancel</button>
+                <input type="submit" value="Submit" class="submit">
+            </div>
 
         </div>
     </div>

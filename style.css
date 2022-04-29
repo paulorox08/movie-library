@@ -28,16 +28,29 @@ body {
     border-radius: 5px;
     margin: 10% auto;
     padding: 20px;
+    padding-top: 40px;
     border: 1px solid black;
     width: 250px;
     height: 400px;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    text-align: center; */
+    text-align: center;
 }
+
+.bottomButtons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+    width: 250px;
+}
+
 
 /* HEADER */
 .header {
@@ -63,6 +76,10 @@ input {
 .close {
  width: 210px;
  padding: 0;
+}
+
+.close, .submit {
+    height: 40px;
 }
 
 /* ADD BUTTON */
