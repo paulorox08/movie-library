@@ -68,7 +68,7 @@ Movie.prototype.createMovie = function() {
     newContainer.className = 'newContainer'
     movieContainer.appendChild(newContainer);
 
-    const newTitle = document.createElement('span');
+    const newTitle = document.createElement('div');
     newTitle.innerText = '"' + newMovie.title + '"';
     newTitle.className = newTitle.innerText;
     newContainer.appendChild(newTitle);
@@ -92,9 +92,8 @@ Movie.prototype.createMovie = function() {
     modal.style.display = 'none';
 
     const newRemove = document.createElement('div');
-    newRemove.className = newTitle.innerText;
-    newRemove.innerText = 'Remove';
-    newRemove.style.border = '1px solid black'
+    newRemove.className = newTitle.innerText + ' material-symbols-outlined';
+    newRemove.innerText = 'delete';
     newContainer.appendChild(newRemove);
 
     newRemove.addEventListener('click', () => {
@@ -135,7 +134,9 @@ submit.addEventListener('click', () => {
 function themeToggle() {
     const root = document.documentElement;
     const newTheme = root.className === 'light' ? 'dark' : 'light';
+    const themeText = theme.innerText === 'dark_mode' ? 'light_mode' : 'dark_mode';
     root.className = newTheme;
+    theme.innerText = themeText;
 }
 
 themeToggle()

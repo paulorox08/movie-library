@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
+
 /* THEME TOGGLE STUFF */
 
 :root.light {
@@ -6,15 +8,21 @@
     --font-colour: black;
     --border-one: #ced4da;
     --border-two: #6c757d;
+    --add-bg-colour: white;
+    --add-hov-colour: lightgray;
+    --newContainer-colour: #e9ecef;
 
 }
 
 :root.dark {
     --header-colour: black;
-    --body-colour: #343a40;
+    --body-colour: #212529;
     --font-colour: #f8f9fa;
-    --border-one: #dee2e6;
+    --border-one: white;
     --border-two: #ced4da;
+    --add-bg-colour: #adb5bd;
+    --add-hov-colour: #6c757d;
+    --newContainer-colour: #495057;
 }
 
 /* BODY */
@@ -138,6 +146,7 @@ input {
     padding: 0;
     border-radius: 5px;
     border: 3px solid var(--border-one);
+    background-color: var(--add-bg-colour);
     border-style: dashed;
     transition: 0.3s;
     font-size: 36px;
@@ -149,7 +158,7 @@ input {
     padding: 0;
     border-radius: 5px;
     border: 3px solid var(--border-two);
-    background-color: lightgray;
+    background-color: var(--add-hov-colour);
     border-style: dashed;
     font-size: 36px;
 }
@@ -168,9 +177,66 @@ input {
     height: 194px;
     border-radius: 5px;
     border: 3px solid black;
+    background-color: var(--newContainer-colour);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    color: var(--font-colour);
 }
+
+.newContainer > span {
+    font-size: 16px;
+}
+
+.newContainer div:first-child {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.newContainer div:last-child {
+    margin-top: 5px;
+    font-size: 26px;
+    cursor: pointer;
+    font-variation-settings: 
+    'FILL' 0;
+    color: red;
+    transition: 0.3s;
+}
+
+.newContainer div:last-child:hover {
+    margin-top: 5px;
+    font-size: 26px;
+    cursor: pointer;
+    font-variation-settings: 
+    'FILL' 1;
+    color: red;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--header-colour);
+    color: var(--font-colour);
+    font-weight: bold;
+}
+
+.fab {
+    color: var(--font-colour);
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 5px;
+}
+  
+.fab:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
