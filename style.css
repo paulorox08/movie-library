@@ -1,3 +1,18 @@
+/* THEME TOGGLE STUFF */
+
+:root.light {
+    --header-colour: white;
+    --body-colour: #dee2e6;
+    --font-colour: black;
+
+}
+
+:root.dark {
+    --header-colour: black;
+    --body-colour: #343a40;
+    --font-colour: #f8f9fa;
+}
+
 /* BODY */
 body {
     margin: 0;
@@ -5,7 +20,8 @@ body {
     border: 0;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: #dee2e6;
+    background-color: var(--body-colour);
+    transition: 0.5s;
 }
 
 /* MODAL FOR ASKING MOVIE */
@@ -63,7 +79,9 @@ body {
     font-size: 42px;
     padding: 20px;
     font-weight: 900;
-    background-color: white;
+    background-color: var(--header-colour);
+    color: var(--font-colour);
+    transition: 0.5s;
 }
 
 .header > span {

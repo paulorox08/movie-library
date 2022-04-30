@@ -3,6 +3,7 @@ const addButton = document.querySelector('.addButton');
 const modal = document.querySelector('.modal');
 const close = document.querySelector('.close');
 let movieContainer = document.querySelector('.movie-container');
+const theme = document.querySelector('.theme');
 
 const titleInfo = document.querySelector('#title');
 const directorInfo = document.querySelector('#director');
@@ -129,3 +130,14 @@ submit.addEventListener('click', () => {
     };
     
 });
+
+
+function themeToggle() {
+    const root = document.documentElement;
+    const newTheme = root.className === 'light' ? 'dark' : 'light';
+    root.className = newTheme;
+}
+
+themeToggle()
+
+theme.addEventListener('click', themeToggle);
