@@ -68,36 +68,32 @@ Movie.prototype.createMovie = function() {
     movieContainer.appendChild(newContainer);
 
     const newTitle = document.createElement('span');
-    newTitle.innerText = newMovie.title;
+    newTitle.innerText = '"' + newMovie.title + '"';
     newTitle.className = newTitle.innerText;
-    newTitle.style.border = '1px solid blue';
     newContainer.appendChild(newTitle);
 
     const newDirector = document.createElement('span');
     newDirector.innerText = newMovie.director;
-    newDirector.style.border = '1px solid red';
     newContainer.appendChild(newDirector);
 
     const newGenre = document.createElement('span');
     newGenre.innerText = newMovie.genre;
-    newGenre.style.border = '1px solid green';
     newContainer.appendChild(newGenre);
 
     const newRuntime = document.createElement('span');
     newRuntime.innerText = newMovie.runtime;
-    newRuntime.style.border = '1px solid purple';
     newContainer.appendChild(newRuntime);
 
     const newYear = document.createElement('span');
     newYear.innerText = newMovie.year;
-    newYear.style.border = '1px solid pink';
     newContainer.appendChild(newYear);
 
     modal.style.display = 'none';
 
     const newRemove = document.createElement('div');
-    newRemove.className = newTitle.innerText + " " + "material-symbols-outlined";
+    newRemove.className = newTitle.innerText;
     newRemove.innerText = 'Remove';
+    newRemove.style.border = '1px solid black'
     newContainer.appendChild(newRemove);
 
     newRemove.addEventListener('click', () => {
