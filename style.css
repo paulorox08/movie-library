@@ -4,6 +4,8 @@
     --header-colour: white;
     --body-colour: #dee2e6;
     --font-colour: black;
+    --border-one: #ced4da;
+    --border-two: #6c757d;
 
 }
 
@@ -11,6 +13,8 @@
     --header-colour: black;
     --body-colour: #343a40;
     --font-colour: #f8f9fa;
+    --border-one: #dee2e6;
+    --border-two: #ced4da;
 }
 
 /* BODY */
@@ -21,7 +25,7 @@ body {
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: var(--body-colour);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 /* MODAL FOR ASKING MOVIE */
@@ -75,8 +79,8 @@ body {
     align-items: center;
     gap: 10px;
     text-align: left;
-    border-bottom: 3px solid lightgray;
-    font-size: 42px;
+    border-bottom: 3px solid var(--border-two);
+    font-size: 36px;
     padding: 20px;
     font-weight: 900;
     background-color: var(--header-colour);
@@ -84,10 +88,25 @@ body {
     transition: 0.5s;
 }
 
-.header > span {
-    font-size: 42px;
+.film-icon {
     font-variation-settings: 
     'FILL' 1;
+}
+
+.theme {
+    position: absolute;
+    right: 2%;
+    font-variation-settings: 
+    'FILL' 0;
+    font-size: 36px;
+    transition: 0.3s;
+}
+
+.theme:hover {
+    cursor: pointer;
+    font-variation-settings: 
+    'FILL' 1;
+    font-size: 36px;
 }
 
 /* FORM */
@@ -118,7 +137,7 @@ input {
     height: 200px;
     padding: 0;
     border-radius: 5px;
-    border: 3px solid gray;
+    border: 3px solid var(--border-one);
     border-style: dashed;
     transition: 0.3s;
     font-size: 36px;
@@ -129,7 +148,7 @@ input {
     height: 200px;
     padding: 0;
     border-radius: 5px;
-    border: 3px solid gray;
+    border: 3px solid var(--border-two);
     background-color: lightgray;
     border-style: dashed;
     font-size: 36px;
