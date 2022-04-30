@@ -87,7 +87,7 @@ body {
     align-items: center;
     gap: 10px;
     text-align: left;
-    border-bottom: 3px solid var(--border-two);
+    border-bottom: 3px groove var(--border-two);
     font-size: 36px;
     padding: 20px;
     font-weight: 900;
@@ -226,7 +226,8 @@ input {
     display: flex;
     background-color: var(--header-colour);
     color: var(--font-colour);
-    font-weight: bold;
+    font-weight: 500;
+    border-top: 3px groove var(--border-two);
 }
 
 .fab {
