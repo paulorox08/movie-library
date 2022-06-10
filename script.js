@@ -54,13 +54,15 @@ function validate() {
 
 let myLibrary = [];
 
-function Movie(title, director, genre, runtime, year) {
-    this.title = title;
-    this.director = director;
-    this.genre = genre;
-    this.runtime = runtime;
-    this.year = year;
-}
+class Movie {
+    constructor(title, director, genre, runtime, year) {
+        this.title = title;
+        this.director = director;
+        this.genre = genre;
+        this.runtime = runtime;
+        this.year = year;
+    }
+};
 
 Movie.prototype.createMovie = function() {
 
